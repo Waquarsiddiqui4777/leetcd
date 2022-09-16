@@ -11,14 +11,14 @@ public:
         while(i < n)
         {
             int c=1;
-            while(i < n && str[i] != ' ')
-            {
+            while(i < n && str[i] != ' '){
+            
                 if(s.count(str[i]))
                 {
                     c=0;
                 }   
-                i++;
-            }
+                i++;}
+        
             if(c)
             {
                 count++;
