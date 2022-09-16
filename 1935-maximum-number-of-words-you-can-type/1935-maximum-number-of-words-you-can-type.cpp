@@ -1,47 +1,45 @@
 class Solution {
 public:
-    int canBeTypedWords(string str, string bad) {
-          
+    int canBeTypedWords(string str, string bad) {    
         int n = str.size();
-        
-        // insert the not working characters into set
-        
         unordered_set<char> s;
-        
         for(auto x : bad)
         {
-            s.insert(x);
-        }
-        
+            s.insert(x);}
         int count = 0;
-        
         int i = 0;
-        
         while(i < n)
         {
             bool flag = true;
-            
             while(i < n && str[i] != ' ')
             {
-        
-                
                 if(s.count(str[i]))
                 {
                     flag = false;
-                }
-                
+                }   
                 i++;
             }
-            
-            
             if(flag)
             {
                 count++;
-            }
-            
+            }    
             i++;
         }
-        
         return count;
+     /*  int n=str.size();
+        int m=bad.size();
+        int ans=0;
+      unordered_set<char> s;
+        for(int i=0;i<m;i++){
+             s.insert(bad[i]);}
+            for(int i=0;i<n;i++){
+                int c=0;
+                   if(s.find(str[i])!=s.end())
+                       c=1;
+                   if(str[i] == ' ' || i == str.size()-1)
+            {
+                if(c==1) c=0;
+                    else ans++;}}
+        return ans;*/
     }
 };
