@@ -10,16 +10,16 @@ public:
         int i = 0;
         while(i < n)
         {
-            bool flag = true;
+            int c=1;
             while(i < n && str[i] != ' ')
             {
                 if(s.count(str[i]))
                 {
-                    flag = false;
+                    c=0;
                 }   
                 i++;
             }
-            if(flag)
+            if(c)
             {
                 count++;
             }    
